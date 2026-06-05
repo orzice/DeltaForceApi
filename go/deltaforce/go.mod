@@ -1,3 +1,3 @@
-module github.com/orzice/deltaforce-api/go/deltaforce
+module github.com/orzice/DeltaForceApi/go/deltaforce
 
 go 1.21

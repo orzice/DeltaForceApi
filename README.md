@@ -17,7 +17,7 @@ pip install requests
 **Go**
 
 ```bash
-go get github.com/orzice/deltaforce-api/go/deltaforce
+go get github.com/orzice/DeltaForceApi/go/deltaforce
 ```
 
 **PHP**
@@ -44,7 +44,7 @@ data = client.post("/ide/", params={"iChartId": "317814", "sIdeToken": "xxx"})
 **Go**
 
 ```go
-import "github.com/orzice/deltaforce-api/go/deltaforce"
+import "github.com/orzice/DeltaForceApi/go/deltaforce"
 
 deltaforce.Token = "your_api_token"
 client := deltaforce.NewClient(30 * time.Second)
@@ -74,7 +74,6 @@ $data = $client->get('/v1/sjz_api/item_list', ['types' => 'acc', 'limit' => 10])
 | 实时交易行 | 全物品列表/Top排行、价格曲线（分钟/小时/天） |
 | 军需处兑换+制造 | 兑换成本、子弹收益、制造利润 |
 | 数据分析 | 钥匙卡预测、子弹分析 |
-| 玩家接口 | 授权登录、角色信息、战绩查询、对局详情 |
 
 ## 通用设计
 
