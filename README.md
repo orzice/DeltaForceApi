@@ -43,11 +43,8 @@ go get github.com/orzice/DeltaForceApi/go/deltaforce
 
 三种语言 API 风格一致：配置类变量 `TOKEN`，调用 `get()` / `post()`。
 
-<table>
-<tr>
-<td width="33%">
-
 **Python**
+
 ```python
 from deltaforce import DeltaForceClient
 
@@ -55,46 +52,32 @@ DeltaForceClient.TOKEN = "your_token"
 
 client = DeltaForceClient()
 data = client.get("/v1/sjz_api/item_info_all")
-data = client.get("/v1/sjz_api/item_list",
-    {"types": "acc", "limit": 10})
+data = client.get("/v1/sjz_api/item_list", {"types": "acc", "limit": 10})
 ```
 
-</td>
-<td width="33%">
-
 **Go**
+
 ```go
 import "github.com/orzice/DeltaForceApi/go/deltaforce"
 
 deltaforce.Token = "your_token"
 client := deltaforce.NewClient(30 * time.Second)
-resp, _ := client.Get(
-    "/v1/sjz_api/item_info_all", nil)
-resp, _ = client.Get(
-    "/v1/sjz_api/item_list",
-    map[string]string{
-        "types": "acc", "limit": "10"})
+resp, _ := client.Get("/v1/sjz_api/item_info_all", nil)
+resp, _ := client.Get("/v1/sjz_api/item_list", map[string]string{
+    "types": "acc", "limit": "10",
+})
 ```
 
-</td>
-<td width="33%">
-
 **PHP**
+
 ```php
 require 'Client.php';
 
 DeltaForceClient::$TOKEN = 'your_token';
 $client = new DeltaForceClient();
-$data = $client->get(
-    '/v1/sjz_api/item_info_all');
-$data = $client->get(
-    '/v1/sjz_api/item_list',
-    ['types' => 'acc', 'limit' => 10]);
+$data = $client->get('/v1/sjz_api/item_info_all');
+$data = $client->get('/v1/sjz_api/item_list', ['types' => 'acc', 'limit' => 10]);
 ```
-
-</td>
-</tr>
-</table>
 
 ## API 接口
 
